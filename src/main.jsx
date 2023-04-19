@@ -1,10 +1,33 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
+import LandingPage from './routes/LandingPage/LandingPage.jsx'
+import Series from './routes/Series/Series.jsx'
+import Movies from './routes/Movies/Movies.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
+
+const router = createBrowserRouter([{
+  path: '/',
+  element: <Navbar />,
+  children: [{
+    path: '/',
+    element: <LandingPage />,
+    children: [
+      {
+        path: '/series',
+        element: <Series />,
+      },
+      {
+        path: '/movies',
+        element: <Movies />,
+      }
+    ]
+  }]
+}])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

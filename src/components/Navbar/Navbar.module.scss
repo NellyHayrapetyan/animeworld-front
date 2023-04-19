@@ -1,0 +1,30 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .navbarLeft {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 40px;
+      margin: 0 20px;
+    }
+
+    .webTitle {
+      font-family: fantasy;
+      font-size: 23px;
+      padding-top: 8px;
+    }
+  }
+
+  .navbarRight {
+    padding-right: 20px;
+  }
+}
