@@ -19,7 +19,7 @@ function Navbar() {
     <div className={classes.navbar}>
       <div className={classes.navbarLeft}>
         <img className={classes.logo} src={animeWorld} alt="Anime World logo"></img>
-        <span className={classes.webTitle}>ANIME WORLD</span>
+        <Link className={classes.webTitle} to={'./'}>ANIME WORLD</Link>
         <Input />
         <Link to={'./series'} className={classes.tabs}>TV-SERIES</Link>
         <Link to={'./movies'} className={classes.tabs}>MOVIES</Link>
