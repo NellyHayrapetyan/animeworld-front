@@ -16,7 +16,9 @@ function Input() {
       }}
       InputProps={{
         startAdornment: (
-          <InputAdornment position="start">
+          <InputAdornment position="start" sx={{
+              color: 'white'
+          }}>
             <SearchIcon />
           </InputAdornment>
         ),
