@@ -6,6 +6,8 @@ import LandingPage from './routes/LandingPage/LandingPage.jsx'
 import Series from './routes/Series/Series.jsx'
 import Movies from './routes/Movies/Movies.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 
 const router = createBrowserRouter([{
   path: '/',
@@ -27,7 +29,7 @@ const router = createBrowserRouter([{
 }])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <RouterProvider router={router}/>
+  </Provider>
 )

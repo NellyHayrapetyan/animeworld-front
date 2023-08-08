@@ -4,13 +4,18 @@
   display: flex;
   flex-direction: column;
 
+  .errorMessage {
+    color: red;
+  }
+
   .loginFooter {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .forgotPassword {
-      color: $primary;
+      color: $secondary;
+      cursor: pointer;
 
       &:hover {
         text-decoration: underline;
@@ -46,7 +51,7 @@ form {
     margin-top: 30px;
 
     .register {
-      color: $primary;
+      color: $secondary;
 
       &:hover {
         text-decoration: underline;

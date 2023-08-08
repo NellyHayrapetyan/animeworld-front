@@ -15,8 +15,19 @@ function SignInModal({ onDialogClose }) {
 
   return (
     <>
-      { dialogOpen.login && <Login openRegistration={openRegistrationHandler} isLoginOpen={dialogOpen.login} onClose={onDialogClose}></Login> }
-      { dialogOpen.registration && <CreateAccount openLogin={openLoginHandler} isRegistrationOpen={dialogOpen.registration} onClose={onDialogClose}></CreateAccount> }
+      { dialogOpen.login &&
+        <Login
+          openRegistration={openRegistrationHandler}
+          isLoginOpen={dialogOpen.login}
+          onClose={onDialogClose}
+        ></Login> }
+      { dialogOpen.registration &&
+        <CreateAccount
+          openLogin={openLoginHandler}
+          isRegistrationOpen={dialogOpen.registration}
+          onClose={onDialogClose}
+        ></CreateAccount>
+      }
     </>
   );
 }

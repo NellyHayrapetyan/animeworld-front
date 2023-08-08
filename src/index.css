@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url('./assets/landscape.jpg');
+  background: linear-gradient(to top, rgb(38, 92, 85) 0%, rgba(42, 44, 49, 0.54) 20%) center center / cover, url('./assets/landscape.jpg');
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

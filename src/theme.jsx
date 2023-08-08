@@ -5,9 +5,11 @@ export const Theme = createTheme({
   components: {
     MuiButton: {
       styleOverrides: {
-        root: {
-          ':focus': {
-            outline: 'none'
+        primary: {
+          root: {
+            ':focus': {
+              outline: 'none'
+            }
           }
         }
       }
@@ -26,8 +28,7 @@ export const Theme = createTheme({
             color: 'white',
           },
           '.MuiPaper-root': {
-            // backgroundColor: '#2a2c31',
-            background: `linear-gradient(to top, #2a2c31 50%, #2a2c318a 100%), url(${itachi})`,
+            background: `linear-gradient(to top, #265c55 50%, #2a2c318a 100%), url(${itachi})`,
             minWidth: '450px',
             borderRadius: 20,
 
@@ -47,7 +48,11 @@ export const Theme = createTheme({
               fontSize: 18,
               opacity: 0.5,
               '&.Mui-focused': {
-                color: colors.red[900],
+                color: '#ffffff',
+                opacity: 1
+              },
+              '&.Mui-error': {
+                color: 'red',
                 opacity: 1
               }
             },
@@ -86,10 +91,10 @@ export const Theme = createTheme({
   },
   palette: {
     primary: {
-      main: colors.red[900]
+      main: '#b39e6b'
     },
     secondary: {
-      main: '#b39e6b'
+      main: colors.red[900]
     }
   }
 })
